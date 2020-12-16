@@ -1,0 +1,59 @@
+@import "../../../../../common/components/constants";
+
+.plot-balloon__photo-form {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+
+  .plot-balloon__photo-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border-style: dashed;
+    border-width: 5px;
+    border-color: #00a7fd;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .plot-balloon__photo-label {
+    border-radius: 5px;
+    background-color: inherit;
+    font: inherit;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+    transition-duration: 0.3s;
+  }
+  .plot-balloon__photo-label:hover {
+    background-color: $mainColorHover;
+  }
+
+  .plot-balloon__photo-input {
+    display: none;
+  }
+
+  .plot-balloon__photo-btn {
+    border-radius: 8px;
+    background-color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+    transition-duration: 0.3s;
+    border-width: 3px;
+    border-color: white;
+    border-style: solid;
+  }
+  .plot-balloon__photo-btn:hover {
+    background-color: $mainColorHover;
+  }
+}

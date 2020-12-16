@@ -1,0 +1,23 @@
+import React from 'react';
+import './topbar.scss';
+
+class Topbar extends React.Component {
+  render() {
+    return (
+      <header className="main-header">
+        <nav className="main-menu">
+          <button className="main-menu__toggle-btn"
+                  onClick={() => this.props.toggleSidepane()}>
+            <i className="fas fa-bars"/>
+          </button>
+          <div className="main-menu__item_logo">
+            <a className="main-menu__link" href="">Plot rent</a>
+          </div>
+          <ul className="main-menu__list"/> {/*here should be some menu items*/}
+        </nav>
+      </header>
+    );
+  }
+}
+
+export {Topbar}

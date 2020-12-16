@@ -1,0 +1,70 @@
+@import "../../../../../common/components/constants";
+
+.plot-balloon__info-form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+
+  .plot-balloon__info-label {
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: inherit;
+    font: inherit;
+    border: none;
+    padding: 10px;
+    outline: none;
+    transition-duration: 0.3s;
+  }
+
+  .plot-balloon__info-input {
+    font-family: inherit;
+    padding: 5px;
+    border-radius: 3px;
+  }
+
+  .plot-balloon__info-textarea {
+    overflow-y: scroll;
+    font-family: inherit;
+    padding: 5px;
+    border-radius: 3px;
+  }
+  .plot-balloon__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    margin-top: 30px;
+
+    .plot-balloon__button {
+      width: 100px;
+      border-radius: 8px;
+      background-color: inherit;
+      font: inherit;
+      cursor: pointer;
+      padding: 10px;
+      outline: none;
+      transition-duration: 0.3s;
+      border-width: 3px;
+      border-style: solid;
+    }
+
+    .plot-balloon__invisible-btn {
+      visibility: hidden;
+    }
+
+    .plot-balloon__save-btn {
+      border-color: $mainColorHover;
+    }
+    .plot-balloon__save-btn:hover {
+      background-color: $mainColorHover;
+    }
+
+    .plot-balloon__delete-btn {
+      border-color: #550000;
+    }
+    .plot-balloon__delete-btn:hover {
+      background-color: #aa0000;
+    }
+  }
+
+}

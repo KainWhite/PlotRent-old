@@ -1,0 +1,62 @@
+@import "../../../../../common/components/constants";
+
+.plot-balloon__doc-form {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+
+  .plot-balloon__doc-thumbnail {
+    width: 70px;
+    height: 70px;
+    border-style: dashed;
+    border-width: 5px;
+    border-color: #00a7fd;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .plot-balloon__doc-label {
+    border-radius: 5px;
+    background-color: inherit;
+    font: inherit;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+    transition-duration: 0.3s;
+    text-align: center;
+    width: 120px;
+  }
+
+  .plot-balloon__doc-label:hover {
+    background-color: $mainColorHover;
+  }
+
+  .plot-balloon__doc-input {
+    display: none;
+  }
+
+  .plot-balloon__doc-btn {
+    border-radius: 8px;
+    background-color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+    transition-duration: 0.3s;
+    border-width: 3px;
+    border-color: white;
+    border-style: solid;
+  }
+
+  .plot-balloon__doc-btn:hover {
+    background-color: $mainColorHover;
+  }
+}

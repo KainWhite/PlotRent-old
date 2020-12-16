@@ -1,0 +1,100 @@
+.ModalWindow {
+  min-width: 300px;
+  width: 25%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+}
+
+.ModalWindowContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.ModalWindowContentWrapper {
+  width: 100%;
+  flex-grow: 1;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.modal_pdf-view {
+  width: 90%;
+  height: 95%;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+
+  .modal__title {
+    margin: 0;
+  }
+}
+
+.close-btn {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.CloseButtonWrapper {
+
+}
+
+.AboutTextArea {
+  resize: none;
+}
+
+.FormSpan {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.FormInput {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.FormTextArea {
+  resize: none;
+  min-height: 100px;
+}
+
+.image-cropper {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.img {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+.AboutP {
+  word-break: break-all;
+}
+
+.ErrorSpan {
+  color: red;
+}
