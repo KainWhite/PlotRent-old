@@ -16,6 +16,41 @@ class UserDAO extends GenericDao {
     return new User(rows[0]);
   }
 
+  static async getFullUserInfo(userId) {
+    const sql = `
+      SELECT 
+        u.nickname,
+        u.login,
+        u.rating,
+        p.id,
+        p.description,
+        av.id,
+        av.value,
+        av.description,
+        a.id,
+        a.description,
+        at.id,
+        at.description
+      FROM ${this.entityClass.tableName} AS u
+      JOIN role r
+        ON r.id = u.role_id
+      JOIN role_permission rp
+        ON r.id = rp.role_id
+      JOIN permission p
+        ON p.id = rp.permission_id
+      JOIN user_appsetting_value uav
+        ON u.id = uav.user_id
+      JOIN appsetting_value av
+        ON av.id = uap.appsetting_value_id
+      JOIN appsetting a
+        ON a.id = av.appsetting_id
+      JOIN appsetting_type at
+        ON at.id = a.appsetting_type_id
+      WHERE u.id = ${userId};`;
+    const rows = await this.connection.query(sql);
+    return new FullUserModel(rows[0]);
+  }
+
   static async create(userData) {
     if (!validateEmail(userData.email)) {
       return {error: "Invalid email provided."};

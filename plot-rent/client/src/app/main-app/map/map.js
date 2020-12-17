@@ -60,7 +60,9 @@ class YandexMap extends React.Component {
     if (this.state.editingPlot) {
       await this.savePlotClick();
     }
-    const plot = await PlotService.create({userId: this.props.currentUser.id});
+    console.log('lol');
+    const plot = {};//await PlotService.create({userId: this.props.currentUser.id});
+    console.log('lol');
     plot.polygon = PlotPolygon(
         this.state.ymaps,
         {
@@ -79,6 +81,7 @@ class YandexMap extends React.Component {
           showPlotDetailsClick: this.showPlotDetailsClick,
         }
     );
+    console.log('lol');
     this.mapRef.geoObjects.add(plot.polygon);
     plot.polygon.editor.startDrawing();
     this.setState(prevState => {
